@@ -748,7 +748,7 @@
 #if defined(JSON_HEDLEY_DIAGNOSTIC_POP)
     #undef JSON_HEDLEY_DIAGNOSTIC_POP
 #endif
-#if defined(__clang__)
+#if defined(__clang__) && !defined(__ICC)
     #define JSON_HEDLEY_DIAGNOSTIC_PUSH _Pragma("clang diagnostic push")
     #define JSON_HEDLEY_DIAGNOSTIC_POP _Pragma("clang diagnostic pop")
 #elif JSON_HEDLEY_INTEL_VERSION_CHECK(13,0,0)
